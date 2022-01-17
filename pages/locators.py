@@ -7,3 +7,6 @@ class MainPageLocators():
 class LoginPageLocators():
     Login_form = (By.ID, "login_form")
     Register_form = (By.ID, "register_form")
+
+class ProductPageLocators():
+    Add_cart = (By.ID, "add_to_basket_form")
