@@ -11,7 +11,7 @@ class ProductPage(BasePage):
     def should_be_add_cart(self):
         add_cart=self.browser.find_element(*ProductPageLocators.Add_cart_assert)
         text_add_cart = add_cart.text
-        assert text_add_cart == self.browser.find_element(*ProductPageLocators.product_name).text, "Название товара соответствует добавленному в корзину."
+        assert text_add_cart == self.browser.find_element(*ProductPageLocators.product_name).text, "Название товара не соответствует добавленному в корзину."
     def should_be_price_cart(self):
         cart_price = self.browser.find_element(*ProductPageLocators.cart_price)
         text_cart_price = cart_price.text
