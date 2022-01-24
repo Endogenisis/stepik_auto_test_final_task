@@ -19,4 +19,8 @@ class ProductPageLocators():
 class BasePageLocators():
     LOGIN_LINK = (By.XPATH, '//*[@id="login_link"]')
     LOGIN_LINK_INVALID = (By.XPATH, '//*[@id="login_link_inc"]')
+class BasketPageLocators():
+    basket_link = (By.XPATH, '//*[@id="default"]/header/div[1]/div/div[2]/span/a')
+    empty_basket = (By.XPATH, '//*[@id="content_inner"]/p')
+    not_empty_basket = (By.XPATH, '//*[@id="content_inner"]/div[1]/div/h2')
 

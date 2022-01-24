@@ -4,6 +4,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from .locators import BasePageLocators
+from .locators import BasketPageLocators
 import math
 import time
 
@@ -61,3 +62,6 @@ class BasePage():
         # return LoginPage(browser=self.browser, url=self.browser.current_url) Способ перехода между страницами.
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Ссылка для входа не появилась."
+    def go_to_basket_page(self):
+        basket_link = self.browser.find_element(*BasketPageLocators.basket_link)
+        basket_link.click()
